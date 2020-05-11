@@ -5,20 +5,25 @@ import Navbar from "./layout/Navbar";
 import Dashboard from "./layout/Dashboard";
 import TypesList from "./components/types/TypeList";
 import { ThemeProvider } from "./context/ThemeContext";
+import { PokemonIdProvider } from "./context/PokemonIdContext";
+import PokemonDetail from "./components/pokemon/PokemonDetail";
 
 function App() {
   return (
-    <div className="App">
-      <ThemeProvider>
-        <BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <div className="App">
           <Navbar />
           <div className="container">
-            <Route path="/pokemons" component={() => <Dashboard />} />
-            <Route path="/types" component={() => <TypesList />} />
+            <PokemonIdProvider>
+              <Route path="/pokemons" component={Dashboard} />
+              <Route path="/types" component={TypesList} />
+              <Route path="/pokemon/:pokemonId" component={PokemonDetail} />
+            </PokemonIdProvider>
           </div>
-        </BrowserRouter>
-      </ThemeProvider>
-    </div>
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

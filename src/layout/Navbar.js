@@ -47,12 +47,12 @@ function Navbar() {
           Types
         </Link>{" "}
         |{" "}
-        <Link
+        <button
           style={linkStyle}
           onClick={() => (value === true ? setValue(false) : setValue(true))}
         >
           Change Theme
-        </Link>
+        </button>
       </div>
     </div>
   );

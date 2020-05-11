@@ -2,7 +2,7 @@ import React from "react";
 
 import PokemonList from "../components/pokemon/PokemonList";
 
-function Dashboard(props) {
+function Dashboard() {
   return (
     <div className="row">
       <div className="col">

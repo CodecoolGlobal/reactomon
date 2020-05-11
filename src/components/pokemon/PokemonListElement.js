@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ThemeContext } from "../../context/ThemeContext";
+import { PokemonIdContext } from "../../context/PokemonIdContext";
 
 const Sprite = styled.img`
   width: 8em;
@@ -16,6 +17,7 @@ const StyledLink = styled(Link)`
 function PokemonListElement(props) {
   const [pokemonImage, setPokemonImage] = useState("");
   const [pokemonIndex, setPokemonIndex] = useState("");
+  const { setPokemonId } = useContext(PokemonIdContext);
   const [value] = useContext(ThemeContext);
 
   useEffect(() => {
@@ -48,7 +50,11 @@ function PokemonListElement(props) {
 
   return (
     <div className="col-md-4 col-sm-6 mb-5">
-      <StyledLink to={`/pokemon/${pokemonIndex}`} style={elementStyle}>
+      <StyledLink
+        to={`/pokemon/${pokemonIndex}`}
+        style={elementStyle}
+        onClick={() => setPokemonId(pokemonIndex)}
+      >
         <Card className="card">
           <div className="card-header" style={cardHeader}>
             {pokemonIndex}
