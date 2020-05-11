@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import styled from "styled-components";
 
+import { ThemeContext } from "../../context/ThemeContext";
+
 function TypeListElement(props) {
+  const [value] = useContext(ThemeContext);
+
   const CardHeader = styled.div`
     font-weight: bold;
     background-color: red;
     color: white;
-    background-color: "red";
+    background-color: ${value ? "red" : "black"};
   `;
 
   const Card = styled.div`
     font-weight: bold;
-    color: "black";
-    background-color: "white";
+    color: ${value ? "black" : "white"};
+    background-color: ${value ? "white" : "grey"};
     box-shadow: 0 1px 3px;
     transition: all 0.5s;
     &:hover {

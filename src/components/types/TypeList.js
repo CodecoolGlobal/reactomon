@@ -9,12 +9,12 @@ function TypeList(props) {
   useEffect(() => {
     axios
       .get("https://pokeapi.co/api/v2/type")
-      .then(res => setTypes(res.data.results));
+      .then((res) => setTypes(res.data.results));
   }, [props, props.url]);
 
   return (
     <div className="row">
-      {types.map(type => (
+      {types.map((type) => (
         <TypeListElement key={type.name} name={type.name} />
       ))}
       ;

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import { ThemeContext } from "../context/ThemeContext";
+
 function Navbar() {
+  const [value, setValue] = useContext(ThemeContext);
+
   const StyledLink = styled(Link)`
     font-weight: bold;
     text-decoration: none;
@@ -14,7 +18,7 @@ function Navbar() {
   `;
 
   const headerStyle = {
-    backgroundColor: "#EF5350",
+    backgroundColor: `${value ? "#EF5350" : "black"}`,
     color: "#FFF",
     textAlign: "center",
     padding: "10px",
@@ -42,6 +46,13 @@ function Navbar() {
         <Link style={linkStyle} to="/types">
           Types
         </Link>{" "}
+        |{" "}
+        <Link
+          style={linkStyle}
+          onClick={() => (value === true ? setValue(false) : setValue(true))}
+        >
+          Change Theme
+        </Link>
       </div>
     </div>
   );

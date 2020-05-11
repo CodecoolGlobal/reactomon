@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Sprite = styled.img`
   width: 8em;
@@ -15,6 +16,7 @@ const StyledLink = styled(Link)`
 function PokemonListElement(props) {
   const [pokemonImage, setPokemonImage] = useState("");
   const [pokemonIndex, setPokemonIndex] = useState("");
+  const [value] = useContext(ThemeContext);
 
   useEffect(() => {
     setPokemonIndex(props.url.split("pokemon/")[1].replace("/", ""));
@@ -30,13 +32,13 @@ function PokemonListElement(props) {
   const cardHeader = {
     fontWeight: "bold",
     color: "white",
-    backgroundColor: "red",
+    backgroundColor: `${value ? "red" : "black"}`,
   };
 
   const Card = styled.div`
     font-weight: bold;
-    color: "#000";
-    background-color: "#FFF";
+    color: ${value ? "#000" : "#FFF"};
+    background-color: ${value ? "#FFF" : "#333"};
     box-shadow: 0 1px 3px;
     transition: all 0.5s;
     &:hover {
