@@ -18,7 +18,7 @@ function PokemonListElement(props) {
   const [pokemonImage, setPokemonImage] = useState("");
   const [pokemonIndex, setPokemonIndex] = useState("");
   const { setPokemonId } = useContext(PokemonIdContext);
-  const [value] = useContext(ThemeContext);
+  const [theme] = useContext(ThemeContext);
 
   useEffect(() => {
     setPokemonIndex(props.url.split("pokemon/")[1].replace("/", ""));
@@ -34,13 +34,13 @@ function PokemonListElement(props) {
   const cardHeader = {
     fontWeight: "bold",
     color: "white",
-    backgroundColor: `${value ? "red" : "black"}`,
+    backgroundColor: `${theme ? "red" : "black"}`,
   };
 
   const Card = styled.div`
     font-weight: bold;
-    color: ${value ? "#000" : "#FFF"};
-    background-color: ${value ? "#FFF" : "#333"};
+    color: ${theme ? "#000" : "#FFF"};
+    background-color: ${theme ? "#FFF" : "#333"};
     box-shadow: 0 1px 3px;
     transition: all 0.5s;
     &:hover {
