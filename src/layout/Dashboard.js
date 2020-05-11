@@ -1,6 +1,6 @@
 import React from "react";
 
-import PokemonList from "../components/PokemonList";
+import PokemonList from "../components/pokemon/PokemonList";
 
 function Dashboard(props) {
   return (

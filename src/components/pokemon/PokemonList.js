@@ -9,12 +9,12 @@ function PokemonList() {
   useEffect(() => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon")
-      .then(res => setPokemons(res.data.results));
+      .then((res) => setPokemons(res.data.results));
   }, []);
 
   return (
     <div className="row">
-      {pokemons.map(pokemon => (
+      {pokemons.map((pokemon) => (
         <PokemonListElement
           key={pokemon.url.split("pokemon/")[1].replace("/", "")}
           name={pokemon.name}
