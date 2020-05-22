@@ -10,7 +10,7 @@ After the process is finished, run:
 ```bash
   npm i
 ```
-To install any further unkown imports
+To install any further imports
 
 ## API Used
 
