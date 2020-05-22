@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to Install
+
+In the project directory, run:
+```bash
+  npx create-react-app
+```
+After the process is finished, run:
+```bash
+  npm i
+```
+To install any further unkown imports
+
+## API Used
+
+[PokéAPI](https://pokeapi.co/docs/v2.html/)
+
 ## Available Scripts
 
 In the project directory, you can run:
