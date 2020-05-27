@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## License
 
-    Apache-2.0
+Apache-2.0
 
 ## How to Install
 
@@ -99,8 +99,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ## Author
 
-Jeneses Dávid
+* Jeneses Dávid
 
 # Contact
 
-jenesesd@gmail.com
+* jenesesd@gmail.com
