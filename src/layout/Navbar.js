@@ -10,23 +10,23 @@ function Navbar() {
   const StyledLink = styled(Link)`
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: ${value ? "#FFCB05" : "#FFF"};
     &:hover {
-      color: white;
+      color: "#C7A008";
       text-decoration: none;
     }
   `;
 
   const headerStyle = {
-    backgroundColor: `${value ? "#EF5350" : "black"}`,
-    color: "#FFF",
+    backgroundColor: `${value ? "#2A75BB" : "black"}`,
+    color: `${value ? "#FFCB05" : "#FFF"}`,
     textAlign: "center",
     padding: "10px",
   };
 
   const linkStyle = {
     fontWeight: "bold",
-    color: "#FFF",
+    color: `${value ? "#FFCB05" : "#FFF"}`,
     textDecoration: "none",
     textAlign: "center",
   };

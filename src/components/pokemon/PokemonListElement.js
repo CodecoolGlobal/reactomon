@@ -34,13 +34,13 @@ function PokemonListElement(props) {
   const cardHeader = {
     fontWeight: "bold",
     color: "white",
-    backgroundColor: `${theme ? "red" : "black"}`,
+    backgroundColor: `${theme ? "#2A75BB" : "black"}`,
   };
 
   const Card = styled.div`
     font-weight: bold;
-    color: ${theme ? "#000" : "#FFF"};
-    background-color: ${theme ? "#FFF" : "#333"};
+    color: ${theme ? "#2A75BB" : "#FFF"};
+    background-color: ${theme ? "#FFCB05" : "#333"};
     box-shadow: 0 1px 3px;
     transition: all 0.5s;
     &:hover {
