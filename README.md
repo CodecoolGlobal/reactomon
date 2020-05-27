@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to Install
+
+In the project directory, run:
+```bash
+  npx create-react-app
+```
+After the process is finished, run:
+```bash
+  npm i
+```
+To install any further imports
+
+## API Used
+
+[PokéAPI](https://pokeapi.co/docs/v2.html/)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,3 +82,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Author
+
+Jeneses Dávid
+
+# Contact
+
+jenesesd@gmail.com
