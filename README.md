@@ -1,15 +1,29 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## License
+
+    Apache-2.0
+
 ## How to Install
 
 In the project directory, run:
+
 ```bash
   npx create-react-app
 ```
+
 After the process is finished, run:
+
 ```bash
-  npm i
+  npm install
 ```
+
+And if anything else is missing, run:
+
+```bash
+    npm install <whatever import name it requires>
+```
+
 To install any further imports
 
 ## API Used
