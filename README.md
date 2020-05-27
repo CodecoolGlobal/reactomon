@@ -21,7 +21,7 @@ After the process is finished, run:
 And if anything else is missing, run:
 
 ```bash
-    npm install <whatever import name it requires>
+  npm install <whatever import name it requires>
 ```
 
 To install any further imports
